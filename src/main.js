@@ -3,8 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import './assets/styles/reset.css'
-import './assets/styles/border.css'
+// styles符号通过webpack.base.conf.js中定义，指向src/assets/styles
+import 'styles/reset.css'
+import 'styles/border.css'
+import 'styles/iconfont.css'
 
 Vue.config.productionTip = false
 
