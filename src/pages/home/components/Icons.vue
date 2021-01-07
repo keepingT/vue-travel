@@ -1,6 +1,6 @@
 <template>
   <div class="icons">
-    <swiper>
+    <swiper :options="swiperOption">
       <swiper-slide v-for="(page, index) of pages" :key="index">
         <div class="icon" v-for="item of page" :key="item.id">
           <div class="icon-img">
@@ -18,25 +18,28 @@ export default {
   name: 'HomeIcons',
   data () {
     return {
+    	swiperOption: {
+        loop: false
+      },
   		iconList: [{
   			id: '001',
-  			imgUrl: '//s.qunarzz.com/homenode/images/touchheader/hotel.png',
+  			imgUrl: 'http://s.qunarzz.com/homenode/images/touchheader/hotel.png',
   			desc: '酒店'
   		}, {
   			id: '002',
-  			imgUrl: '//s.qunarzz.com/homenode/images/touchheader/flight.png',
+  			imgUrl: 'http://s.qunarzz.com/homenode/images/touchheader/flight.png',
   			desc: '机票'
   		}, {
   			id: '003',
-  			imgUrl: '//s.qunarzz.com/homenode/images/touchheader/train.png',
+  			imgUrl: 'http://s.qunarzz.com/homenode/images/touchheader/train.png',
   			desc: '火车票'
   		}, {
   			id: '004',
-  			imgUrl: '//s.qunarzz.com/homenode/images/touchheader/package.png',
+  			imgUrl: 'http://s.qunarzz.com/homenode/images/touchheader/package.png',
   			desc: '度假'
   		}, {
   			id: '005',
-  			imgUrl: '//s.qunarzz.com/homenode/images/touchheader/piao.png',
+  			imgUrl: 'http://s.qunarzz.com/homenode/images/touchheader/piao.png',
   			desc: '景点门票'
   		}, {
   			id: '006',
@@ -81,7 +84,9 @@ export default {
   .icons >>> .swiper-container
     height: 0
     padding-bottom: 50%
-  .icon
+  .icons
+  	margin-top: .1rem
+  	.icon
     position: relative
     overflow: hidden
     float: left

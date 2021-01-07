@@ -4,6 +4,8 @@
     <home-header></home-header>
     <home-swiper></home-swiper>
     <my-home-icons></my-home-icons>
+    <home-recommend></home-recommend>
+    <home-weekend></home-weekend>
   </div>
 </template>
 
@@ -11,6 +13,8 @@
 import HomeHeader from './components/Header'
 import HomeSwiper from './components/Swiper'
 import HomeIcons from './components/Icons'
+import HomeRecommend from './components/Recommend'
+import HomeWeekend from './components/Weekend'
 export default {
   // name 为组件名
   name: 'Home',
@@ -18,7 +22,9 @@ export default {
     // HomeHeader定义组件的标签名<home-header>
     HomeHeader,
     HomeSwiper,
-    myHomeIcons: HomeIcons
+    myHomeIcons: HomeIcons,
+    HomeRecommend,
+    HomeWeekend
   }
 }
 </script>
