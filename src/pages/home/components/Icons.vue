@@ -16,64 +16,30 @@
 <script>
 export default {
   name: 'HomeIcons',
+  props: {
+    list: Array
+  },
   data () {
     return {
-    	swiperOption: {
+      swiperOption: {
         loop: false
-      },
-  		iconList: [{
-  			id: '001',
-  			imgUrl: 'http://s.qunarzz.com/homenode/images/touchheader/hotel.png',
-  			desc: '酒店'
-  		}, {
-  			id: '002',
-  			imgUrl: 'http://s.qunarzz.com/homenode/images/touchheader/flight.png',
-  			desc: '机票'
-  		}, {
-  			id: '003',
-  			imgUrl: 'http://s.qunarzz.com/homenode/images/touchheader/train.png',
-  			desc: '火车票'
-  		}, {
-  			id: '004',
-  			imgUrl: 'http://s.qunarzz.com/homenode/images/touchheader/package.png',
-  			desc: '度假'
-  		}, {
-  			id: '005',
-  			imgUrl: 'http://s.qunarzz.com/homenode/images/touchheader/piao.png',
-  			desc: '景点门票'
-  		}, {
-  			id: '006',
-  			imgUrl: 'https://picbed.qunarzz.com/f5e5770393d759578962e53ee67798c8.png',
-  			desc: '海外酒店'
-  		}, {
-  			id: '007',
-  			imgUrl: 'https://picbed.qunarzz.com/a36d2288f19e54562338f4d8ef986288.png',
-  			desc: '低价机票'
-  		}, {
-  			id: '008',
-  			imgUrl: 'https://picbed.qunarzz.com/377db8cb2143aebf01869c9baad3d325.png',
-  			desc: '汽车票船票'
-  		}, {
-  			id: '009',
-  			imgUrl: 'https://picbed.qunarzz.com/ae617a31e0bd5803d76918b817f6d942.png',
-  			desc: '自由行'
-  		}]
+      }
     }
   },
   computed: {
-  	pages () {
-  		// pages: Array<Array<{id: string, imgUrl: string, desc: string}>>
-  		// 计算轮播的页数，二维数组，一维是多少页，二维是每页存放的数据（8个图标），
-  		const pages = [];
-  		this.iconList.forEach((item, index) => {
-  			const page = Math.floor(index / 8)
-  			if (!pages[page]) {
-					pages[page] = []
-  			}
-  			pages[page].push(item)
-  		})
-  		return pages
-  	}
+    pages () {
+      // pages: Array<Array<{id: string, imgUrl: string, desc: string}>>
+      // 计算轮播的页数，二维数组，一维是多少页，二维是每页存放的数据（8个图标），
+      const pages = []
+      this.list.forEach((item, index) => {
+        const page = Math.floor(index / 8)
+        if (!pages[page]) {
+          pages[page] = []
+        }
+        pages[page].push(item)
+      })
+      return pages
+    }
   }
 }
 </script>
@@ -85,8 +51,8 @@ export default {
     height: 0
     padding-bottom: 50%
   .icons
-  	margin-top: .1rem
-  	.icon
+    margin-top: .1rem
+  .icon
     position: relative
     overflow: hidden
     float: left
