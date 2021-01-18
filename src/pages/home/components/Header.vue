@@ -7,10 +7,12 @@
       <span class="iconfont">&#xe699;</span>
       输入城市/景点/游玩主题
     </div>
-    <div class="header-right">
-      {{city}}
-      <span class="iconfont arrow-icon">&#xe877;</span>
-    </div>
+    <router-link to="/city">
+      <div class="header-right">
+        {{city}}
+        <span class="iconfont arrow-icon">&#xe877;</span>
+      </div>
+    </router-link>
   </div>
 </template>
 
@@ -55,6 +57,7 @@ scoped设置的样式只适用于该组件，会在DOM元素上添加一个data-
       float: right
       width: 1.24rem
       text-align: center
+      color: #fff
       .arrow-icon
         margin-left: -.04rem
         font-size: .35rem
