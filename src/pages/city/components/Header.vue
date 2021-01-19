@@ -25,10 +25,10 @@ export default {
     background: $bgColor
     font-size: .32rem
     .header-back
-    	position: absolute
-    	top: 0
-    	left: 0
-    	width: .64rem
-    	color: #fff
-    	font-size: .4rem
+      position: absolute
+      top: 0
+      left: 0
+      width: .64rem
+      color: #fff
+      font-size: .4rem
 </style>
